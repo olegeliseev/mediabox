@@ -1,0 +1,102 @@
+.wrapper h3 {
+    color: #484948;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fileName {
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+}
+
+.wrapper li {
+    font-size: 18px;
+}
+
+.zippedFiles {
+    margin-top: 20px;
+}
+
+.zippedFiles p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #484948;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: 600;
+}
+
+.wrapper button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.wrapper button {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #484948;
+    margin: 20px auto 0 auto;
+}
+
+.wrapper button:hover {
+    background-color: #979292;
+    color: #fff;
+}
+
+.uploaded-area {
+    max-height: 232px;
+    overflow-y: scroll;
+}
+
+.uploaded-area .row {
+    border: 1px solid #f8f8f8;
+}
+
+.uploaded-area .row:hover {
+    background-color: #f8f8f8;
+}
+
+.uploaded-area .row {
+    margin-bottom: 10px;
+    background: #eeeeee;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploaded-area .row i {
+    color: #484948;
+    font-size: 30px;
+}
+
+.uploaded-area .row span {
+    font-size: 14px;
+}
+
+.uploaded-area::-webkit-scrollbar {
+    width: 0px;
+}
+
+.uploaded-area .row .content {
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area .row .details {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.uploaded-area .row .details .size {
+    color: #404040;
+    font-size: 11px;
+}

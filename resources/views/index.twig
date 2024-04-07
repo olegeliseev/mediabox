@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Mediabox{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+{% endblock %}
+
+{% block content %}
+	<div class="wrapper">
+		<h3>Загрузка файлов</h3>
+		<form action="/" method="POST" enctype='multipart/form-data'>
+			<div class="drop-zone">
+				<input class="file-input" type="file" name="files[]" hidden multiple>
+				<i class="fas fa-cloud-upload-alt"></i>
+				<p>Нажать или перетащить файлы</p>
+			</div>
+			<button class="upload-button" type="submit" name="submit">Отправить</button>
+		</form>
+		<section class="progress-area"></section>
+		<section class="uploaded-area"></section>
+	</div>
+	<script src="/js/index.js"></script>
+{% endblock %}

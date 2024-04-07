@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		{% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="/css/layout.css">
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<div class="header-content">
+				<a href="/"><h1 class="main-logo">media<span>Box</span></h1></a>
+			</div>
+		</header>
+
+		{% block content %}{% endblock %}
+
+		<footer>
+			<div class="footer-content">
+				<a href="https://github.com/olegeliseev" target="_blank">olegeliseev</a>
+				<i class="fa-brands fa-github"></i>
+			</div>
+		</footer>
+		<script src="https://kit.fontawesome.com/ac6250e557.js" crossorigin="anonymous"></script>
+	</body>
+</html>

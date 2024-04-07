@@ -1,0 +1,42 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Загруженные файлы
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/css/loadedFiles.css">
+{% endblock %}
+
+{% block content %}
+	<div class="wrapper">
+		<h3>Загруженные файлы:</h3>
+
+		{% if imgOutput != '' %}
+			<div class="imgContainer">
+				{{ imgOutput|raw }}
+			</div>
+		{% else %}
+			<i class="zip-icon fa-solid fa-file-zipper"></i>
+		{% endif %}
+
+		<div class="fileName">
+			<p>
+				<span>Название файла</span>:
+				{{ file.fileName }}</p>
+		</div>
+		<div class="fileSize">
+			<p>
+				<span>Размер:</span>
+				{{ file.fileSize / 1000 }}
+				КБ</p>
+		</div>
+
+		<div class="fileLink">
+			<p>
+				<span>Ссылка для скачивания:</span>
+				<a href="/{{file.hash}}" target="_blank">{{'http://mediabox.loc/' ~ file.hash}}</a>
+			</p>
+		</div>
+	</div>
+{% endblock %}

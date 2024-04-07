@@ -1,0 +1,46 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Скачать
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="/css/downloadFiles.css">
+{% endblock %}
+
+{% block content %}
+	<div class="wrapper">
+	
+		<h3>Скачать файл:</h3>
+
+		<p class="fileName">{{file.fileName}}</p>
+
+		{% if file.extension is same as('zip') %}
+			<div class="zippedFiles">
+				<p>Файлы в архиве:</p>
+
+				<div class="uploaded-area">
+					{% for zippedFile in zippedFiles %}
+						<ul>
+							<li class="row">
+								<div class="content upload">
+									<i class="fas fa-file-alt"></i>
+									<div class="details">
+										<span class="name">{{ zippedFile.name }}</span>
+										<span class="size">{{ zippedFile.size / 1000 }}
+											КБ</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+
+		<button>
+			<a href={{'http://mediabox.loc/download/' ~ file.hash}}>Скачать</a>
+		</button>
+
+	</div>
+{% endblock %}

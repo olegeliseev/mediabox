@@ -1,0 +1,52 @@
+.imgContainer {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #484948; 
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.imgContainer:hover {
+    box-shadow: 0 0 2px 1px rgba(72, 73, 72, 0.5);
+    cursor: pointer;
+  }
+
+.imgOutput {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.zip-icon {
+    color: #484948;
+    font-size: 100px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.wrapper p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.wrapper span {
+    color: #484948;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: 600;
+}
+
+.wrapper a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #979292;
+}
+
+.wrapper a:hover {
+    color: black;
+}

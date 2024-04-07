@@ -1,0 +1,146 @@
+.drop-zone {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #484948;
+    color: #484948;
+    text-shadow: 1px 1px 0 #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drop-zone i {
+    font-size: 50px;
+}
+
+.drop-zone p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.upload-button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #484948;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.upload-button:hover {
+    background-color: #979292;
+    color: #fff;
+}
+
+section .row {
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .row:hover {
+    background-color: #f8f8f8;
+}
+
+section .row i {
+    color: #484948;
+    font-size: 30px;
+}
+
+section .details span {
+    font-size: 14px;
+}
+
+.progress-area .row .content {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area .details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+    text-shadow: 1px 1px 0 #fff;
+    color: #484948;
+}
+
+.progress-area .content .progress-bar {
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #979292;
+    border-radius: 30px;
+}
+
+.content .progress-bar .progress {
+    height: 100%;
+    width: 0%;
+    background: #484948;
+    border-radius: inherit;
+}
+
+.uploaded-area {
+    max-height: 232px;
+    overflow-y: scroll;
+}
+
+.uploaded-area .row {
+    border: 1px solid #f8f8f8;
+}
+
+.uploaded-area.onprogress {
+    max-height: 150px;
+}
+
+.uploaded-area::-webkit-scrollbar {
+    width: 0px;
+}
+
+.uploaded-area .row .content {
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area .row .details {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+    text-shadow: 1px 1px 0 #fff;
+    color: #484948;
+}
+
+.uploaded-area .row .details .size {
+    color: #404040;
+    font-size: 11px;
+}
+
+.uploaded-area .icons {
+    user-select: none;
+    outline: 0;
+}
+
+.uploaded-area i.fa-check{
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.uploaded-area i.fa-trash {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.uploaded-area i.fa-trash:hover {
+    color: #979292;
+}
