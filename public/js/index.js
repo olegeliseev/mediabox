@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const dropZone = document.querySelector(".drop-zone");
 const fileInput = document.querySelector(".file-input");
+const warningArea = document.querySelector(".warning-area");
 const progressArea = document.querySelector(".progress-area");
 const uploadedArea = document.querySelector(".uploaded-area");
 
@@ -41,6 +42,7 @@ dropZone.addEventListener("drop", (e) => {
 
 dropZone.addEventListener("change", (e) => {
     e.preventDefault();
+
     const dataTransfer = new DataTransfer();
 
     for (let i = 0; i < fileInput.files.length; i++) {
@@ -67,9 +69,9 @@ function formatFilesNames(files) {
                 let splitName = file.name.split(".");
                 let fileName =
                     splitName[0].substring(0, 13) + "... ." + splitName[1];
-                appendFile(fileName, file.lastModified);
+                appendFile(fileName, file.lastModified, file.size);
             } else {
-                appendFile(file.name, file.lastModified);
+                appendFile(file.name, file.lastModified, file.size);
             }
         }
     });
@@ -89,7 +91,15 @@ function removeFile(fileId) {
     fileInput.files = dataTransfer.files;
 }
 
-function appendFile(fileName, fileId) {
+function appendFile(fileName, fileId, fileSize) {
+    
+    warningArea.innerHTML = '';
+    
+    if((fileSize / 1000000000) > 3) {
+        warningArea.innerHTML = `<p>Максимальный размер файла - 3 ГБ</p>`;
+        return;
+    }
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/");
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");

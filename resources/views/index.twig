@@ -1,6 +1,6 @@
 {% extends 'layout.twig' %}
 
-{% block title %}Mediabox{% endblock %}
+{% block title %}mediaBox{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -16,6 +16,7 @@
 				<i class="fas fa-cloud-upload-alt"></i>
 				<p>Нажать или перетащить файлы</p>
 			</div>
+			<section class="warning-area"></section>
 			<button class="upload-button" type="submit" name="submit">Отправить</button>
 		</form>
 		<section class="progress-area"></section>
